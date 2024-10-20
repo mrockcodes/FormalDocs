@@ -1,0 +1,23 @@
+function informalToFormal(text) {
+    const replacements = {
+        'hey': 'greetings',
+        'hi': 'hello',
+        "you're": 'you are',
+        "gotta": 'have to',
+        "want to": 'wish to',
+        "can't": 'cannot',
+        "won't": 'will not',
+        "pretty": 'quite',
+        "thanks": 'thank you',
+        "yeah": 'yes',
+        "nope": 'no',
+        "chill": 'relax',
+        "kids": 'children',
+        "bye": 'goodbye',
+        "see ya": 'see you later',
+        "stuff": 'items',
+        "thing": 'matter',
+    };
+
+    return text.replace(/\b(\w+)\b/g, (match) => replacements[match.toLowerCase()] || match);
+}
