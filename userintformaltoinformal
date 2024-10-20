@@ -1,0 +1,13 @@
+<textarea id="inputText" rows="10" cols="30"></textarea>
+<button id="convertButton">Convert</button>
+<textarea id="outputText" rows="10" cols="30" readonly></textarea>
+
+<script>
+    document.getElementById('convertButton').addEventListener('click', () => {
+        const input = document.getElementById('inputText').value;
+        const output = informalToFormal(input);
+        document.getElementById('outputText').value = output;
+    });
+</script>
+
+
